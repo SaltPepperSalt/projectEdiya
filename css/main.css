@@ -1,0 +1,352 @@
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+
+/* 기본 설정 */
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+/* 초기화 */
+.btnNone {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.resetList {
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* 유틸리티 */
+.a11yHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+/* 공통 로고 */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 30;
+}
+
+@keyframes logoAni {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    80% {
+        transform: translateX(1%);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+.headerHeading {
+    margin: 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.headerHeading a {
+    animation: logoAni .5s;
+    width: 164px;
+    display: block;
+    padding: 2.5rem;
+}
+
+/* 공통 네비게이션 */
+@keyframes menuAni {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+.btnMenuopen {
+    animation: menuAni .5s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85px;
+    height: 78px;
+    text-align: center;
+}
+
+.btnMenuopen:hover {
+    background-color: #eee;
+}
+
+.btnBurger {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 27px;
+    height: 22px;
+}
+
+.burgerBar {
+    display: block;
+    width: 100%;
+    height: 20%;
+    background-color: #525254;
+    position: absolute;
+}
+
+.burgerTop {
+    top: 0;
+    left: 0;
+}
+
+.burgerMiddle {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.burgerBottom {
+    top: 100%;
+    left: 0;
+    transform: translateY(-100%);
+}
+
+.menuList {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(14, 18, 35, 0.9);
+    z-index: 10;
+    padding-top: 50px;
+    transform: translateX(100%);
+    transition: all .5s;
+}
+
+.isAct .menuList {
+    transform: none;
+}
+
+.menuList a {
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 1em;
+    display: block;
+    border-bottom: 1px solid #22305A;
+}
+
+.menuItem a:hover {
+    background-color: #22305A;
+}
+
+.btnMenuClose {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    font-size: 3rem;
+    padding: 20px 30px;
+    z-index: 20;
+    color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.isAct .btnMenuClose {
+    right: 0;
+}
+
+/* 공통 메인 */
+@keyframes productAni {
+    0% {
+        transform: translateY(15%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+main {
+    padding: 10rem 2rem 2rem;
+}
+
+.productList {
+    margin: 0 auto;
+    max-width: 830px;
+}
+
+.product {
+    float: left;
+    width: calc((100% - 20px) / 2);
+    background-color: #f5f5f5;
+    position: relative;
+    text-align: center;
+    max-width: 400px;
+    height: 360px;
+    margin-bottom: 20px;
+}
+.productList li:nth-child(2n-1) .product{
+    margin-right: 20px;
+}
+
+.productList li:nth-child(1) .product {
+    animation: productAni 1s;
+}
+
+.productList li:nth-child(2) .product{
+    animation: productAni 1s .1s;
+}
+
+.productList li:nth-child(3) .product{
+    animation: productAni 1s .2s;
+}
+
+.productList li:nth-child(4) .product{
+    animation: productAni 1s .3s;
+}
+
+.productList li:nth-child(5) .product,
+.productList li:nth-child(6) .product,
+.productList li:nth-child(7) .product,
+.productList li:nth-child(8) .product{
+    animation: productAni 1s;
+}
+
+.infoButton {
+    height: 360px;
+    display: block;
+}
+
+figure {
+    margin: 0;
+    height: 100%;
+}
+
+figcaption {
+    font-size: 1.6rem;
+}
+
+.productImg {
+    max-width: 100%;
+    height: 85%;
+    transition: all .5s;
+    transform: scale(0.85);
+    /* width: 50%; */
+}
+
+.infoButton:hover .productImg {
+    transform: scale(1);
+}
+
+.productHeading {
+    font-weight: normal;
+    display: block;
+    font-size: 1.8rem;
+}
+
+.infoCard {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2rem 2rem 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #ddd;
+    transition: opacity .5s linear;
+    z-index: -1;
+}
+
+.infoOpen {
+    z-index: 1;
+    opacity: 1;
+}
+
+
+.enTitle {
+    display: block;
+    font-size: 1.5rem;
+    color: #888;
+}
+
+.enTitle::after {
+    content: "";
+    display: block;
+    background-color: #181818;
+    height: 2px;
+    margin-top: 2rem;
+}
+
+.productInfo {
+    font-size: 1.4rem;
+}
+
+.productNutrition {
+    /* column-width: 50%; */
+    column-count: 2;
+    column-rule: 1px solid black;
+    font-size: 1.4rem;
+    background-color: #F8F8F8;
+    padding: 2rem 2rem;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nutrition {
+    width: 56px;
+    float: left;
+    margin: 0 1rem;
+    line-height: 1.5;
+}
+
+.content {
+    float: left;
+    margin-left: 35px;
+    line-height: 1.5;
+}
+
+.closeinfoButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1em 1.2em;
+    margin: 0;
+    cursor: pointer;
+}
+
+.closeinfoButton:hover {
+    background-color: #efefef;
+}
+
+.closeinfoButton span {
+    font-weight: 100;
+    font-size: 2.5rem;
+}
