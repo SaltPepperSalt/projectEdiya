@@ -68,6 +68,12 @@ a {
     width: 164px;
     display: block;
     padding: 2.5rem;
+    background-image: url(../images/Logo1x.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: 120%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 /* 공통 네비게이션 */
@@ -261,7 +267,7 @@ figcaption {
     font-size: 1.6rem;
 }
 
-.productImg {
+[class^=productImg]{
     max-width: 100%;
     height: 85%;
     transition: all .5s;
@@ -269,10 +275,48 @@ figcaption {
     /* width: 50%; */
 }
 
-.infoButton:hover .productImg {
+.infoButton:hover [class^=productImg] {
     transform: scale(1);
 }
 
+.productImg--iceCherry {
+    background: url('css_sprites.png') -234px -10px;
+}
+
+
+.productImg--hotCherry {
+    background: url('css_sprites.png') -458px -10px;
+}
+
+
+.productImg--iceBrownie {
+    background: url('css_sprites.png') -10px -10px;
+}
+
+
+.productImg--hotBrownie {
+    background: url('css_sprites.png') -10px -325px;
+}
+
+
+.productImg--jejuOriginal {
+    background: url('css_sprites.png') -234px -325px;
+}
+
+
+.productImg--jejuBlossom {
+    background: url('css_sprites.png') -458px -325px;
+}
+
+
+.productImg--pomeOriginal {
+    background: url('css_sprites.png') -682px -10px;
+}
+
+
+.productImg--pomeApple {
+    background: url('css_sprites.png') -682px -324px;
+}
 .productHeading {
     font-weight: normal;
     display: block;
@@ -364,3 +408,51 @@ figcaption {
     font-weight: 100;
     font-size: 2.5rem;
 }
+.scrollUp {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/GoToTop.png);
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    cursor: pointer;
+}
+
+/* 다크모드 */
+/* @media (prefers-color-scheme: dark) {
+    body{
+        background-color: #000;
+        color: #fff;
+    }
+    .product {
+        background-color: #303030;
+    }
+    .headerHeading{
+        border-bottom-color: #606060;
+    }
+    figcaption {
+        color: #fff;
+    }
+    .menuList {
+        background-color: #181818;
+    }
+    .menuItem a{
+        border-bottom-color: #525254;
+    }
+    .productNutrition{
+        background-color: #181818;
+        column-rule-color:  #fff;
+    }
+    .infoCard{
+        background-color: rgba(20, 20, 20, 0.7);
+        border-color: #525254;
+    }
+    .headerHeading a {
+        background-image: url(../images/Logo1x_negative.png);
+    }
+    .closeinfoButton{
+        color: #777;
+    } 
+    
+}*/

@@ -34,3 +34,8 @@ infoClose.on('click keyup', function (e) {
         $(this).parent().removeClass('infoOpen');
     }
 });
+
+$( '.scrollUp' ).click( function() {
+	$( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+	return false;
+} );

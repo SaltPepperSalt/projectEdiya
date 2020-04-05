@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDIYA COFFEE</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./images/icon.png">
     <script src="./js/jquery.min.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
 
 <body>
     <header class="header">
-        <h1 class="headerHeading"><a href="#"><img src="./images/Logo1x.png" alt="이디야 커피" class="logo"></a></h1>
+        <h1 class="headerHeading"><a href="#" role="banner">이디야 커피</a></h1>
 
-        <nav class="navigation">
-            <h2 class="navigationHeading a11yHidden">메인메뉴</h2>
+        <nav class="navigation" aria-labelledby="navigationHeading">
+            <h2 class="navigationHeading a11yHidden" id="navigationHeading">메인메뉴</h2>
             <a href="#" role="button" class="btnMenuopen">
                 <div class="btnBurger">
                     <span class="burgerBar burgerTop"></span>
@@ -41,7 +42,7 @@
                 <article class="product">
                     <a href="#" role="button" class="infoButton">
                         <figure>
-                            <img src="./images/1X/ice/02_Ice_Cherry_Blossom_Latte.png" alt="" class="productImg">
+                            <img src="./images/1X/ice/02_Ice_Cherry_Blossom_Latte.png" alt="" class="productImg--iceCherry">
                             <figcaption>ICED 벚꽃라떼</figcaption>
                         </figure>
                     </a>
@@ -72,7 +73,7 @@
                 <article class="product">
                     <a href="#" role="button" class="infoButton">
                         <figure>
-                            <img src="./images/1X/hot/02_Ice_Cherry_Blossom_Latte.png" alt="" class="productImg">
+                            <img src="./images/1X/hot/02_hot_Cherry_Blossom_Latte.png" alt="" class="productImg--hotCherry">
                             <figcaption>HOT 벚꽃라떼</figcaption>
                         </figure>
                     </a>
@@ -101,7 +102,7 @@
                 <article class="product">
                     <a href="#" role="button" class="infoButton">
                         <figure>
-                            <img src="./images/1X/ice/03_Ice_Brownie_Chocolate.png" alt="" class="productImg">
+                            <img src="./images/1X/ice/03_Ice_Brownie_Chocolate.png" alt="" class="productImg-iceBrownie">
                             <figcaption>ICED 브라우니 쇼콜라</figcaption>
                         </figure>
                     </a>
@@ -130,7 +131,7 @@
                 <article class="product">
                     <a href="#" role="button" class="infoButton">
                         <figure>
-                            <img src="./images/1X/hot/04_Hot_Brownie_Chocolate.png" alt="" class="productImg">
+                            <img src="./images/1X/hot/04_Hot_Brownie_Chocolate.png" alt="" class="productImg--hotBrownie">
                             <figcaption>HOT 브라우니 쇼콜라</figcaption>
                         </figure>
                     </a>
@@ -159,7 +160,7 @@
                 <article class="product">
                     <a href="#" role="button" class="infoButton">
                         <figure>
-                            <img src="./images/1X/Tangerine/05_Jeju_Green_Tangerine_Tea.png" alt="" class="productImg">
+                            <img src="./images/1X/Tangerine/05_Jeju_Green_Tangerine_Tea.png" alt="" class="productImg--jejuOriginal">
                             <figcaption>제주청귤 오리지널</figcaption>
                         </figure>
                     </a>
@@ -189,7 +190,7 @@
                     <a href="#" role="button" class="infoButton">
                         <figure>
                             <img src="./images/1X/Tangerine/06-Jeju_Green_Tangerine_Blossom.png" alt=""
-                                class="productImg">
+                                class="productImg--jejuBlossom">
                             <figcaption>제주청귤 블라썸</figcaption>
                         </figure>
                     </a>
@@ -220,7 +221,7 @@
                 <article class="product">
                     <a href="#" role="button" class="infoButton">
                         <figure>
-                            <img src="./images/1X/Pomegranate/07_Pomegranate_Tea.png" alt="" class="productImg">
+                            <img src="./images/1X/Pomegranate/07_Pomegranate_Tea.png" alt="" class="productImg--pomeOriginal">
                             <figcaption>석류 오리지널</figcaption>
                         </figure>
                     </a>
@@ -249,7 +250,7 @@
                 <article class="product">
                     <a href="#" role="button" class="infoButton">
                         <figure>
-                            <img src="./images/1X/Pomegranate/08_Pomegranate_Apple_Lime.png" alt="" class="productImg">
+                            <img src="./images/1X/Pomegranate/08_Pomegranate_Apple_Lime.png" alt="" class="productImg-pomeApple">
                             <figcaption>석류 애플라임</figcaption>
                         </figure>
                     </a>
@@ -276,6 +277,7 @@
             </li>
         </ul>
     </main>
+    <button class="scrollUp btnNone"></button>
 </body>
 
 </html>
