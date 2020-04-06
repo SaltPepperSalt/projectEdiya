@@ -174,10 +174,14 @@ a {
     color: #fff;
     cursor: pointer;
     transition: all .5s;
+    outline: none;
 }
 
 .isAct .btnMenuClose {
     right: 0;
+}
+.isAct .btnMenuClose:hover{
+    transform: scale(1.4);
 }
 
 /* 공통 메인 */
@@ -255,7 +259,8 @@ a {
 
 .infoButton {
     height: 360px;
-    display: block;
+    margin: 0 auto;
+    outline: none;
 }
 
 figure {
@@ -275,7 +280,8 @@ figcaption {
     /* width: 50%; */
 }
 
-.infoButton:hover [class^=productImg] {
+.infoButton:hover [class^=productImg],
+.infoButton:focus [class^=productImg] {
     transform: scale(1);
 }
 

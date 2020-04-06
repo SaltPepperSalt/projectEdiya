@@ -24,6 +24,7 @@ infoOpen.on('click keyup', function (e) {
     if (e.keyCode === 13 || e.type === 'click') {
         $(this).siblings(infoCard).css('transition','opacity .5s linear');
         $(this).siblings(infoCard).addClass('infoOpen');
+        $(this).siblings(infoCard).attr('aria-hidden', 'false')
     }
 });
 
@@ -32,6 +33,7 @@ infoClose.on('click keyup', function (e) {
     if (e.keyCode === 13 || e.type === 'click') {
         $(this).parent().css('transition','opacity .5s linear, z-index 0s .5s')
         $(this).parent().removeClass('infoOpen');
+        $(this).parent().attr('aria-hidden', 'true')
     }
 });
 
